@@ -1,24 +1,20 @@
-# Compiled class file
-*.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+class Main{
+    public static void insertionSort(int []arr){
+        for(int i=1;i<arr.length;i++){
+            int key=arr[i];
+            int j=i;
+            while(j>0 && arr[j-1]>key){
+                arr[j]=arr[j-1];
+                j=j-1;
+            }
+            arr[j]=key;
+        }
+        for(int i=0;i<arr.length;i++){
+            System.out.println(arr[i]);
+        }
+    }
+    public static void main(String[]args){
+        int[]array={15,7,35,2,141,1};
+        insertionSort(array);
+    }
+}
