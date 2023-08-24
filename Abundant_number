@@ -1,0 +1,21 @@
+class Main{
+    static int abundantNumber(int n){
+        int sum=0;
+        for(int i=1;i<=n/2;i++){
+            if(n%i==0){
+                sum=sum+i;
+            }
+        }
+        return sum;
+    }
+    public static void main(String[]args){
+        int num=12;
+        int sum1=abundantNumber(num);
+        if(sum1>num){
+            System.out.println("Abandunt Number");
+        }
+        else{
+            System.out.println("Not abandunt");
+        }
+    }
+}
