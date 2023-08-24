@@ -1,0 +1,46 @@
+class Main{
+    static int secondlargest(int arr[]){
+        int largestleement=arr[0];
+        int secondlargestelement=arr[0];
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]>largestleement){
+                secondlargestelement=largestleement;
+                largestleement=arr[i];
+            }
+            else if(arr[i]<largestleement && arr[i]>secondlargestelement){
+                secondlargestelement=arr[i];
+            }
+        }
+        return secondlargestelement;
+    }
+    static int SmallLargeSum(int[] arr){
+        int Oddarr[]=new int[arr.length];
+        int evenarr[]=new int[arr.length];
+        int count=0;
+        int count1=0;
+        int a=0;
+        int b=0;
+        for(int i=0;i<arr.length;i++){
+            if(i % 2==0){
+                evenarr[count]=arr[i];
+                count++;
+                a=secondlargest(evenarr);
+                //System.out.println(a);
+
+            }
+            else{
+                Oddarr[count1]=arr[i];
+                count1++;
+                b=secondlargest(Oddarr);
+                System.out.println(b);
+            }
+        }
+        return a+b;
+    }
+    public static void main(String[]args){
+        int mainarr[]={3,2,1,7,5,4};
+        int result;
+        result= SmallLargeSum(mainarr);
+        System.out.println(result);
+    }
+}
