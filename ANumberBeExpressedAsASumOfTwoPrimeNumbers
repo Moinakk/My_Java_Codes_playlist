@@ -1,0 +1,26 @@
+class Main{
+    static int primeNumber(int num){
+        int flag=1;
+        for(int i=2;i<=num/2;i++){
+            if(num%i==0){
+                flag=0;
+            }
+        }
+        return flag;
+
+    }
+    public static void main(String[]args){
+        int num=14;
+        int count=1;
+        for(int i=2;i<=num/2;i++){
+            if(primeNumber(i)==1 && primeNumber(num-i)==1){
+                System.out.println(num+" is addition of this two numbers "+i+" "+(num-i));
+                count=0;
+            }
+        }
+        if(count==1){
+            System.out.println("not possible");
+        }
+
+    }
+}
