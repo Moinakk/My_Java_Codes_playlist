@@ -1,0 +1,23 @@
+class Main{
+    static int autoMorphicNumber(int n){
+        int count=0;
+        int sqr = n*n;
+        //finding the no of digit of the number
+        while(n>0){
+            n=n/10;
+            count++;
+        }
+        int lastDigit = (int)(sqr%(Math.pow(10,count)));
+        return lastDigit;
+    }
+    public static void main(String[]args){
+       int num=76;
+       int num1=autoMorphicNumber(num);
+       if(num==num1){
+           System.out.println("Auto");
+       }
+       else{
+           System.out.println("Not auto");
+       }
+    }
+}
