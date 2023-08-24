@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+class Main{
+    static int Fact(int n){
+        int fact=1;
+        for(int i=1;i<=n;i++) {
+            fact *= i;
+        }
+
+        return fact;
+    }
+    public static void main(String[]args){
+        int result=0;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number of people");
+        int n=sc.nextInt();
+        System.out.println("enter the number of seats");
+        int r = sc.nextInt();
+         result =Fact(n)/Fact(n-r);
+         System.out.println(result);
+    }
+}
