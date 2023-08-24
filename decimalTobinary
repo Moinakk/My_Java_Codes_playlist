@@ -1,0 +1,20 @@
+class Main{
+    static int decimalTobinary(int num){
+        int decimalNumber=0;
+                int i=0;
+        int rem;
+
+        while(num>0){
+            rem=num%10;
+            num=num/10;
+            decimalNumber+=rem*(Math.pow(2,i));
+            i++;
+        }
+        return decimalNumber;
+    }
+    public static void main(String[]args){
+        int num=11;
+        int convert=decimalTobinary(num);
+        System.out.println(convert);
+    }
+}
