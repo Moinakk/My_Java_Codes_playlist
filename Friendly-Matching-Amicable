@@ -1,0 +1,26 @@
+class Main{
+    static int divisorSum(int n){
+        int i =1,sum=0;
+        while(i<=n/2){
+            if(n%i==0){
+               sum+=i;
+            }
+            i++;
+            //return (sum+n)/n;
+        }
+        return (sum+n)/n;
+    }
+    public static void main(String[]args){
+        int a=6;
+        int b = 28;
+        int sumof_a,sumof_b;
+        sumof_a=divisorSum(a);
+        sumof_b=divisorSum(b);
+        if(sumof_a==sumof_b){
+            System.out.println("Matching");
+        }
+        else{
+            System.out.println("not");
+        }
+    }
+}
