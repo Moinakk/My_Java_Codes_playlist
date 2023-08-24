@@ -1,0 +1,27 @@
+class Main{
+    static boolean checkSame(int[]a,int[]b){
+        int m=a.length;
+        int n=b.length;
+        if(m!=n){
+            return false;
+        }
+        for(int i=0;i<m;i++){
+            if(a[i]!=b[i])
+                return false;
+
+
+        }
+        return true  ;
+    }
+    public static void main(String[]args){
+        int []arr={3, 5, 2, 5, 2 };
+        int []arr2={2, 3, 5, 4, 2};
+        if(checkSame(arr,arr2)){
+            System.out.println("yes");
+        }
+        else{
+            System.out.println("No");
+        }
+
+    }
+}
